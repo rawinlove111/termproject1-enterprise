@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>POS System</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Latest compiled and minified CSS -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link href="UI.css" rel="stylesheet" type="text/css"/>
+         <!-- JQuery-->
+         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+         
+    </head>
+    <body>
+        <div class="row">
+            <div class="" style='margin-left: 10%;margin-right:10%;width:80%'>
+                
+                <div class='' style='background-color:lightblue; width:100%; height:200px'>
+                    <div class='col-md-2 topgrid'>1 <img src="sim3047-512.png" alt="" style="width:50%;margin-left: 70px"></div>
+                    <div class='col-md-2 topgrid'> 2 <img src="sim3047-512.png" alt="" style="width:50%;margin-left: 70px"></div>
+                    <div class='col-md-2 topgrid'> 3 <img src="sim3047-512.png" alt="" style="width:50%;margin-left: 70px"></div>
+                    <div class='col-md-2 topgrid'> 4 <img src="sim3047-512.png" alt="" style="width:50%;margin-left: 70px"></div>
+                    <div class='col-md-2 topgrid'> 5 <img src="sim3047-512.png" alt="" style="width:50%;margin-left: 70px"></div>
+                    <div class='col-md-2 topgrid'> 6 <img src="sim3047-512.png" alt="" style="width:50%;margin-left: 70px"></div>
+                    
+                    <div class='col-md-2 topgrid'>7 <img src="sim3047-512.png" alt="" style="width:50%;margin-left: 70px"></div>
+                    <div class='col-md-2 topgrid'>8 <img src="sim3047-512.png" alt="" style="width:50%;margin-left: 70px"></div>
+                    <div class='col-md-2 topgrid'>9 <img src="sim3047-512.png" alt="" style="width:50%;margin-left: 70px"> </div>
+                    <div class='col-md-2 topgrid'>10 <img src="sim3047-512.png" alt="" style="width:50%;margin-left: 70px"></div>
+                    <div class='col-md-2 topgrid'> 11 <img src="sim3047-512.png" alt="" style="width:50%;margin-left: 70px"></div>
+                    <div class='col-md-2 topgrid'> 12 <img src="sim3047-512.png" alt="" style="width:50%;margin-left: 70px"></div>
+                    
+                    
+                </div>
+                
+                <div class='col-md-12' style = "background-color:lightblue; width:100%; height:20px;padding-top:4.5px">
+                    <B style="margin-left: 7.5px" id="currentTime"></B>
+                    <B style="margin-left: 15px">Cashier <span id="NumOfCashier">1</span></B>
+                </div>
+                
+                <div class='col-md-6' style='height:420px; background-color:lightblue; padding:0px;padding-left:7.5px; padding-top:7.5px'>
+                    <div class='' style='width:100%; height:325px;border:1px solid gray; background-color: whitesmoke; overflow-y: scroll;'>
+                         <table class="table" style='width:100%; background-color:whitesmoke; padding:0px; margin:0px;'>
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Price</th>
+                                        <th>Price Per Litre</th>
+                                        <th>Total Litre</th>
+                                    </tr>
+                                </thead>
+                                <tbody id='listItem'></tbody>
+                        </table>
+                    </div>
+                    <div class='' style='width:100%;border:1px solid gray; background-color: whitesmoke; margin-top:7.5px; height:72px;'>
+                        <table class="table" style='width:100%; background-color:whitesmoke; padding:0px; margin:0px;'>
+                            <thead>
+                                <tr>
+                                    <th colspan="2" height='30px' style='font-size: 15; '>Total Price</th>
+                                    <th colspan='2' style='font-size: 15; text-align: center;' id = "totalPrice">0</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="1" height='30px' style='font-size: 15'>Total Sales (Shift)</th>
+                                    <th style='font-size: 15'>0</th>
+                                    <th colspan="1" height='30px' style='font-size: 15'>Total Sales (Day)</th>
+                                    <th style='font-size: 15'>0</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        </div>
+                </div>
+                
+                <div class='col-md-6' style='height:420px; background-color:lightblue; padding: 0px'> 
+                    <div style='width:66.6%;height:420px; padding:7.5px; margin:0px; float:left'>
+                         <textarea readonly style='width:100%;height:80px; resize:none; font-size: 50px; text-align: right;' id="textField">0</textarea>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="7">7</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="8">8</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="9">9</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="4">4</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="5">5</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="6">6</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="1">1</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="2">2</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="3">3</button>
+                         <button type="button" class="btn btn-default col-md-8 calBut" id="0">0</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="dotCal">.</button>
+                    </div>
+                    
+                    <div style='width:33.4%;height:420px; padding:7.5px;padding-left: 0px; margin:0px; float:left;' id='mainSelect'>
+                        <button type="button" class="btn btn-default col-md-6" style = "height:65px;border:1px solid gray;margin:0px;background-color:whitesmoke;font-size: 45px;padding-bottom: 0px" id="C">C</button>
+                        <button type="button" class="btn btn-default col-md-6" style = "height:65px;border:1px solid gray;margin:0px;background-color:whitesmoke;font-size: 20px;padding-bottom: 0px" id="Clear"><img src="Simpleicons_Interface_undo-arrow-in-a-circle.svg.png" style="width:50px"/></button>
+                        <button type="button" class="btn btn-default col-md-12" style="margin-top: 2px;height:125px;border:1px solid gray;background-color:whitesmoke;font-size: 45px" id="Enter">Enter</button>
+                        <button type="button" class="btn btn-default col-md-12" style="margin-top: 2px;height:210px;border:1px solid gray;background-color:whitesmoke;font-size: 30px" id="Cancel"><img src="cancel_black_192x192.png" style="width:150px"/></button>
+                        
+                        
+                    </div>
+                    
+                    <div style='width:33.4%;height:420px; padding:7.5px;padding-left: 0px; margin:0px; float:left;' id='typeSelect'>
+
+                        <button type="button" class="btn btn-default col-md-12" style="margin-top: 1px;height:80px;border:1px solid gray;background-color:whitesmoke;font-size: 30px" id="Gas91">Gasohol 91</button>
+                        <button type="button" class="btn btn-default col-md-12" style="margin-top: 1px;height:80px;border:1px solid gray;background-color:whitesmoke;font-size: 30px" id="Gas95">Gasohol 95</button>
+                        <button type="button" class="btn btn-default col-md-12" style="margin-top: 1px;height:80px;border:1px solid gray;background-color:whitesmoke;font-size: 30px" id="Diesel">Diesel</button>
+                        <button type="button" class="btn btn-default col-md-12" style="margin-top: 1px;height:80px;border:1px solid gray;background-color:whitesmoke;font-size: 30px" id="E20">E20</button>
+                        <button type="button" class="btn btn-default col-md-12" style="margin-top: 1px;height:80px;border:1px solid gray;background-color:whitesmoke;font-size: 30px" id="Cancel_1"><img src="Simpleicons_Interface_undo-arrow-in-a-circle.svg.png" style="width:50px"/></button>
+                    </div>
+                    
+                    <div style='width:33.4%;height:420px; padding:7.5px;padding-left: 0px; margin:0px; float:left;' id='paymentSelect'>
+
+                        <button type="button" class="btn btn-default col-md-12 payment" id="CreditCard">Credit Card</button>
+                        <button type="button" class="btn btn-default col-md-12 payment" id="CashCard">Cash Card</button>
+                        <button type="button" class="btn btn-default col-md-12 payment" id="Cash">Cash</button>
+                        <button type="button" class="btn btn-default col-md-12 cancel"><img src="Simpleicons_Interface_undo-arrow-in-a-circle.svg.png" style="width:50px"/></button>
+                    </div>
+                </div>
+                
+            </div>
+             
+        </div>
+        <script>
+            var gas91 = 26.80;
+            var gas95 = 27.10;
+            var e20 = 25.50;
+            var diesel = 29.20;
+            var type = "";
+            var checkDot = true;
+            var totalPrice = 0;
+            var latestPrice = 0 ;
+            var count = 0;
+                
+            setInterval(function(){
+                var d = new Date(); 
+                $("#currentTime").html(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());},1000
+            );
+    
+            $("#typeSelect").hide();
+            $("#paymentSelect").hide();
+            
+            $("#Cancel").click(function(){
+                //alert(count);
+                if(count > 0)
+                {
+                    
+                    //var test = $("#listItem tr:last").find("td").eq(1).html();
+                    //var test = $("#listItem tr:last td:eq(1)").html();
+                    //alert(test);
+                    
+                    totalPrice = totalPrice - parseInt($("#listItem tr:last td:eq(1)").html());
+                    $("#totalPrice").html(totalPrice);
+                    $("#itemId" + (count-1)).remove();
+                    --count;
+                }
+            });
+            
+            $(".cancel").click(function(){
+                $("#typeSelect").show();
+                $("#paymentSelect").hide();
+            });
+            
+            $(".payment").click(function(){
+                
+                var price = $("#textField").html();
+                latestPrice = price;
+                
+                if(price != 0)
+                {
+                    var selectedType;
+                    var perLitre;
+                    if(type == "Gas91")
+                    {
+                        selectedType = "Gasohol 91"
+                        perLitre = gas91;
+                    }
+                    else if(type == "Gas95")
+                    {
+                        selectedType = "Gasohol 95"
+                        perLitre = gas95;
+                    }
+                    else if(type == "Diesel")
+                    {
+                        selectedType = "Diesel"
+                        perLitre = diesel;
+                    }
+                    else
+                    {
+                        selectedType = "E20"
+                        perLitre = e20; 
+                    }
+                
+                    $("#listItem").html($("#listItem").html()+"<tr id='"+ "itemId" +count +"'><td>"+ selectedType +"</td><td> "+ price +"</td><td>"+ perLitre +"</td><td>"+ (price/gas91) +"</td></tr>");
+                    totalPrice +=  parseInt(price);
+                    count++;
+                    $("#totalPrice").html(totalPrice);
+                    $("#textField").html("0");
+                    $("#mainSelect").show();
+                    $("#paymentSelect").hide();
+                }
+                else
+                {
+                    alert("Price is 0");
+                    $("#mainSelect").show();
+                    $("#paymentSelect").hide();
+                }
+            });
+            
+            $("#Enter").click(function(){
+                $("#mainSelect").hide();
+                $("#typeSelect").show();
+            });
+            
+            $("#Cancel_1").click(function(){
+                $("#mainSelect").show();
+                $("#typeSelect").hide();
+            });
+            
+            $("#Gas91").click(function(){
+                type = this.id;
+                $("#typeSelect").hide();
+                $("#paymentSelect").show();
+            });
+            
+            $("#Gas95").click(function(){
+                type = this.id;
+                $("#typeSelect").hide();
+                $("#paymentSelect").show();
+            });
+            
+            $("#Diesel").click(function(){
+                type = this.id;
+                $("#typeSelect").hide();
+                $("#paymentSelect").show();
+            });
+            
+            $("#E20").click(function(){
+                type = this.id;
+                $("#typeSelect").hide();
+                $("#paymentSelect").show();
+            });
+                
+            $("#C").click(function()
+            {
+                $("#textField").html("0");
+            });
+            
+            $("#Clear").click(function()
+            {
+                var current = $("#textField").html();
+                if(current != "0")
+                {
+                    if(current.length == 1)
+                    {
+                        $("#textField").html("0");
+                    }
+                    else
+                    {
+                        $("#textField").html(current.substr(0,current.length-1));
+                    }
+                }
+            });
+            
+            $(".calBut").click(function(){
+                var current = $("#textField").html();
+                if(current.length < 12)
+                {
+                    if(current == "0" && this.id != "dotCal")
+                    {
+                        $("#textField").html(this.id);
+                    }
+                   else if(this.id == "dotCal" && checkDot)
+                   {
+                        $("#textField").html(current+".");
+                        checkDot = false;
+                   }
+                   else if(this.id != "dotCal")
+                   {
+                       $("#textField").html(current+this.id);
+                   }
+                }
+                else
+                {
+                    alert("ERROR");
+                }
+            });
+            
+        </script>
+    </body>
+</html>
